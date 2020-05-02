@@ -1,8 +1,6 @@
 const { Sequelize, DataTypes, Model } = require('sequelize');
 const dbConnection = require('../db-connection');
 
-console.log(dbConnection)
-
 class Base extends Model {
     getAddress() {
         const streetCityState = [this.street, this.city, this.state].join(',');

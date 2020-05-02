@@ -24,5 +24,8 @@
     "pg": "^8.0.3",
     "pg-hstore": "^2.3.3",
     "sequelize": "^5.21.7"
+  },
+  "devDependencies": {
+    "errorhandler": "^1.5.1"
   }
 }

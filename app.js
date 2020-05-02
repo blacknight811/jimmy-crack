@@ -5,7 +5,8 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const helmet = require('helmet');
 const compression = require('compression');
-const cors = require('cors')
+const cors = require('cors');
+const errorhandler = require('errorhandler');
 
 
 const indexRouter = require("./routes/index");
@@ -17,6 +18,11 @@ const app = express();
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
+
+if (process.env.NODE_ENV === 'development') {
+  // only use in development
+  app.use(errorhandler())
+}
 
 app.use(helmet());
 app.use(compression()); //Compress all routes
