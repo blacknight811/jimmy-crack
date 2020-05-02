@@ -1,3 +1,5 @@
 .env
 node_modules
 .elasticbeanstalk/
+npm-debug.log
+.DS_Store
